@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+
+{% block title %}Crear estadio{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Introduce los datos del estadio</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-outline-success mb-3 form-control">Create</button>
+        
+    </form>
+</div>
+
+
+
+{% endblock %}

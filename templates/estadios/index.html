@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+
+{% block title %}Estadiums{% endblock %}
+
+{% block content %}
+<h1>Elija que requiere hacer:</h1>
+<div class="container-fluid-sm">
+    <text>Consultar</text>
+    <a class="btn btn-primary" href="/estadios/stadiums_list" role="button">Consultar estadios</a>
+</div>
+<div class="container-fluid-sm">
+    <text>Introducir estadios</text>
+    <a class="btn btn-primary" href="/estadios/create_stadium" role="button">Introducir estadios</a>
+</div>
+{% endblock %}

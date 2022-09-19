@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Detalles del estadio{% endblock title %}
+
+{% block content %}
+<div class="container-fluid-sm">
+   <text>Nombre: {{ stadiums.nameStadium}}</text>
+</div>
+<div class="container-fluid-sm">
+    <text>Ciudad donde se encuentra: {{ stadiums.nameStadium }}</text>
+ </div>
+ <div class="container-fluid-sm">
+    <text>Numero de personas permitidas: {{ stadiums.maxPersons }}</text>
+ </div>
+ <div class="container-fluid-sm">
+    <text>Siguiente juego:  {{ stadiums.nextGame }}</text>
+ </div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "base/base.html" %}
+
+{% block title %}Modificar estadio{% endblock %}
+
+{% block content %}
+<form action="" method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-warning mb-3 form-control">Modificar</button>
+    <a href="{% url 'est:stadiums_list' %}" class="btn btn-outline-info mb-3 form-control">Cancelar</a>
+</form>
+{% endblock %}

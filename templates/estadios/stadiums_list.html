@@ -1,0 +1,28 @@
+{% extends "base/base.html" %}
+
+{% block title %}Lista de estadios{% endblock %}
+
+{% block content %}
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <th>Id del estadio</th>
+            <th>Nombre del estadio</th>
+            <th>Detalles estadio</th>
+            <th>Modificar estadio</th>
+            <th>Eliminar estadio</th>
+        </thead>
+        <tbody>
+            {% for stadiums in stadiums %}
+                <tr>
+                    <td>{{ stadiums.id }}</td>
+                    <td>{{ stadiums.nameStadium }}</td>
+                    <td><a href="{% url 'est:stadium_detail' stadiums.pk %}" class="btn btn-primary">Detail</a></td>
+                    <td><a href="{% url 'est:stadium_update' stadiums.pk %}" class="btn btn-warning">Update</a></td>
+                    <td><a href="{% url 'est:delete_stadium' stadiums.pk %}" class="btn btn-danger">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
